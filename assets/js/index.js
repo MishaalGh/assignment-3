@@ -22,9 +22,11 @@ $("#update_user").submit(function(event){
         data[n['name']] = n['value']
     })
 
-    // Create an AJAX request for updating the user data
+    // Create an AJAX request for updating the user data http://localhost:3000/api/users/
     var request = {
         "url" : `https://crud-site-bee80d781f6d.herokuapp.com/api/users/${data.id}`,
+        //"url" : `http://localhost:3000/api/users/${data.id}`,
+        //if trying to run locally
         "method" : "PUT",
         "data" : data
     }
@@ -43,6 +45,7 @@ if(window.location.pathname == "/"){
 
         var request = {
             "url" : `https://crud-site-bee80d781f6d.herokuapp.com/api/users/${id}`,
+            //"url" : `http://localhost:3000/api/users/`${data.id},
             "method" : "DELETE"
         }
         // Confirm before deleting the user
