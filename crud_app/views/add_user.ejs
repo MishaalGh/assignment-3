@@ -1,0 +1,35 @@
+<!-- Name: Mishaal.Ghumman -->
+<!-- Date: 2024-11-24 -->
+<!-- Purpose: With reusable header and footer elements, this template maintains a consistent look while offering a form for generating new user accounts and navigation to access the user list.-->
+
+<!-- Include the reusable header partial -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Main Site Content -->
+<main id="site-main">
+    <div class="container">
+        <!-- Navigation box with a link to return to all users -->
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+        <!-- Back navigation link -->
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Users</a>
+           </div>
+        </div>
+        <!-- Title and description for the form -->
+        <div class="form-title text-center">
+            <h2 class="text-dark">New Friend</h2>
+            <span class="text-light">Add your new friend below!</span>
+        </div>
+
+        <!-- Include the form partial for adding a new friend -->
+        <%- include('include/_form') %>
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
+
+<!-- End of program -->

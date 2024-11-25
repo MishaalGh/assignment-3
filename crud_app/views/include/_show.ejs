@@ -1,0 +1,28 @@
+<!-- Name: Mishaal.Ghumman -->
+<!-- Date: 2024-11-24 -->
+<!-- Purpose: By cycling over user data, presenting each person's details, and offering the ability to alter or remove each user, this script creates rows for a table dynamically.-->
+
+<% for(var i = 0; i < users.length; i++) { %> <!-- Loop through the array of users -->
+    <tr><!-- Table row for each user -->
+         <!-- Display the user index -->
+        <td><%= i + 1 %></td>
+
+        <!-- Display user details: name, email, gender, and status -->
+        <td><%= users[i].name %></td>
+        <td><%= users[i].email %></td>
+        <td><%= users[i].gender %></td>
+        <td><%= users[i].status %></td>
+        <!-- Action buttons for updating or deleting friends -->
+        <td>
+            <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <!-- Delete button: triggers a delete action using the friend ID -->
+            <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %> <!-- End of the loop -->
+    
+    <!-- End of program -->

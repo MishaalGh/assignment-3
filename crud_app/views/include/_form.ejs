@@ -1,0 +1,60 @@
+<!-- Name: Mishaal.Ghumman -->
+<!-- Date: 2024-11-24 -->
+<!-- Purpose: This form allows users to create or change user information by sending a POST request to the /api/users endpoint with information like name, email, gender, and status. -->
+ 
+<!-- Form for handling friend data -->
+<form action="/api/users" method="POST" id="add_user">
+    <!-- Wrapper for new user form fields -->
+    <div class="new_user">
+
+        <!-- Name input field -->
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value=""> <!-- Hidden field for user ID (useful for updates) -->
+            <input type="text" name="name" value="" placeholder="Mishaal Ghumman"> <!-- Input field for name -->
+        </div>
+
+        <!-- Email input field -->
+        <div class="form-group">
+            <label for="Email" class="text-light">Email</label>
+            <input type="text" name="email" value="" placeholder="example@gmail.com"> <!-- Input field for email -->
+        </div>
+
+        <!-- Gender radio buttons -->
+        <div class="form-group">
+            <label for="gender" class="text-light">Gender</label>
+            <div class="radio inline">
+                <!-- Radio button for selecting Male -->
+                <input type="radio" id="radio-2" name="gender" value="Male">
+                <label for="radio-2" class="radio-label">Male</label>
+            </div>
+            <div class="radio inline">
+                <!-- Radio button for selecting Female -->
+                <input type="radio" id="radio-3" name="gender" value="Female">
+                <label for="radio-3" class="radio-label">Female</label>
+            </div>
+        </div>
+
+        <!-- Status radio buttons -->
+        <div class="form-group">
+            <label for="gender" class="text-light">Status</label>
+            <div class="radio inline">
+                <!-- Radio button for Active status -->
+                <input type="radio" id="radio-4" name="status" value="Active">
+                <label for="radio-4" class="radio-label">Active</label>
+            </div>
+            <div class="radio inline">
+                <!-- Radio button for Inactive status -->
+                <input type="radio" id="radio-5" name="status" value="Inactive">
+                <label for="radio-5" class="radio-label">Inactive</label>
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button> <!-- Button to submit form -->
+        </div>
+
+    </div>
+</form>
+<!-- End of Header -->

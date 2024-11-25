@@ -1,0 +1,51 @@
+<!-- Name: Mishaal.Ghumman -->
+<!-- Date: 2024-11-24 -->
+<!-- Purpose: This template has reusable header and footer elements for uniformity, permits form submissions, and dynamically presents user data in a table format. -->
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+<!-- Main Site Content -->
+    <main id="site-main">
+        <div class="container">
+            <!-- Navigation box with a link to add a new user -->
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <!-- Display "New User" with an icon -->
+                    <span class="text-gradient">New User <i class="fas fa-user"></i></span>
+                </a>
+            </div>
+
+        <!-- Form to handle data submission -->
+            <form action="/" method="POST">
+                <!-- Table structure for displaying user data -->
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                        <!-- Table headers for user information -->
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>@Email</th>
+                            <th>Gender</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Include partial for dynamically showing data rows -->
+                        <%- include('include/_show') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
+
+<!-- End of program -->
