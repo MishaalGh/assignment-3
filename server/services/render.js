@@ -8,7 +8,7 @@ const axios = require('axios'); // Import axios for making HTTP requests
 // Render the home page with a list of users
 exports.homeRoutes = (req, res) => {
     // Make a GET request to fetch all users from the API
-    axios.get('http://localhost:3000/api/users')
+    axios.get('https://crud-site-bee80d781f6d.herokuapp.com/api/users')
         .then(function(response) {
             // Render the index page and pass the fetched user data
             res.render('index', { users: response.data });
