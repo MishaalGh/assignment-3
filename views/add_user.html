@@ -25,7 +25,6 @@
 <!-- End of Header -->
 
 <!--Main site-->
-
 <main id="site-main">
     <div class="container">
         <div class=".box-nav.d-flex justify-between">
@@ -53,15 +52,34 @@
                 <div class="form-group">
                     <label for="gender" class="'text-light">gender</label>
                     <div class="radio inline">
-                        <input type="radio"name="gender"value="Male">
-                        <label for="gender" class="'text-light">male</label>
+                        <input type="radio" id="radio-2" name="gender"value="Male">
+                        <label for="radio-2" class="radio-label">male</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio"id="radio-3"name="gender"value="Female">
+                        <label for="radio-3" class="radio-label">Female</label>
                     </div>
                 </div>
+                
+                <div class="form-group">
+                    <label for="gender" class="'text-light">Status</label>
+                    <div class="radio inline">
+                        <input type="radio"id="radio-4"name="Status"value="active">
+                        <label for="radio-4" class="radio-label">active</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio"id="radio-5"name="Status"value="inactive">
+                        <label for="radio-5" class="radio-label">inactive</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit"class="btn text-dark update">Save</button>
+                </div>
+                    
             </div>
         </form>
-        <!--End of Form handling-->
     </div> 
 </main>
-<!--Main site-->
+<!--End of Main site-->
 </body>
 </html>
