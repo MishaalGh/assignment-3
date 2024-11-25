@@ -28,7 +28,7 @@ exports.add_user = (req, res) => {
 // Render the page for updating an existing user
 exports.update_user = (req, res) => {
     // Make a GET request to fetch details of a specific user by ID
-    axios.get('http://localhost:3000/api/users', { params: { id: req.query.id } })
+    axios.get('https://crud-site-bee80d781f6d.herokuapp.com/api/users', { params: { id: req.query.id } })
         .then(function(userdata) {
             // Render the update_user page and pass the specific user data
             res.render("update_user", { user: userdata.data });

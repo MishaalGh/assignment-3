@@ -24,7 +24,7 @@ $("#update_user").submit(function(event){
 
     // Create an AJAX request for updating the user data
     var request = {
-        "url" : `http://localhost:3000/api/users/${data.id}`,
+        "url" : `https://crud-site-bee80d781f6d.herokuapp.com/api/users/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -42,7 +42,7 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://localhost:3000/api/users/${id}`,
+            "url" : `https://crud-site-bee80d781f6d.herokuapp.com/api/users/${id}`,
             "method" : "DELETE"
         }
         // Confirm before deleting the user
